@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <title>Pig Farm</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Pig Farm</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Topics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Pig Farming Trainning</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Pig cross Taining</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Daily Pig Routine</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+          <div class="mx-2 my-2">
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#signUpModal"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="Login"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sign up modal  -->
+
+    <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      aria-labelledby="signUpModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="Input"
+                  class="form-control"
+                  id="firstName"
+                  aria-describedby="emailHelp"
+                />
+
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="Input"
+                  class="form-control"
+                  id="lastName"
+                  aria-describedby="emailHelp"
+                />
+
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+
+              <div class="mb-3">
+                <label for="reEnterPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="reEnterPassword"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Create Account
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider for the Home -->
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="start3.jpeg"
+            class="d-block w-100"
+            alt="https://source.unsplash.com/"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Welcome to Pig Farm</h2>
+            <p>
+              RealPigFarming unites pig farmers, academics, youth, veterinarians
+              and allied industry members to discuss how modern pork production
+              really works
+            </p>
+            <button class="btn btn-primary">Cross</button>
+            <button class="btn btn-danger">Routine</button>
+            <button class="btn btn-success">Diet</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="start5.jpg"
+            class="d-block w-100"
+            alt="https://source.unsplash.com/"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Real Pig Farming</h5>
+            <p>
+              Our people are our industry’s most important assets. People
+              working in the pig industry need to have the right information and
+              training. This ensures they can effectively protect the welfare
+              and health of their pigs and ensure a safe, high quality product.
+            </p>
+            <button class="btn btn-primary">Cross</button>
+            <button class="btn btn-danger">Routine</button>
+            <button class="btn btn-success">Diet</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="start1.jpg" class="d-block w-100" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Research</h5>
+            <p>
+              We recognise there is always room for improvement. This is why the
+              industry continues to invest millions of dollars into research,
+              innovation and on-farm improvements. We are committed to getting
+              the balance right.
+            </p>
+            <button class="btn btn-primary">Cross</button>
+            <button class="btn btn-danger">Routine</button>
+            <button class="btn btn-success">Diet</button>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleCaptions"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleCaptions"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <!-- container -->
+
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              >
+              <h3 class="mb-0">The First Step</h3>
+
+              <p class="card-text mb-auto">
+                Every journey begins with a single step. Indian pork is no
+                different. Every day, Indian pig farmers raise and produce the
+                finest pork on the planet. We’re proud of what we do and the
+                animals we raise.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="housing3.jpg"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              >
+              <h3 class="mb-0">Mating & Pregnancy</h3>
+
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="housing2.jpg"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Birth</h3>
+
+              <p class="mb-auto">
+                A week before giving birth, pregnant sows are moved into the
+                farrowing or birthing sheds or paddocks. This housing can
+                include the use of piglet protection pens (farrowing crates) to
+                ensure individual care.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="housing1.jpg"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Our Housing</h3>
+
+              <p class="mb-auto">
+                After weaning, sows will typically come back “on heat” within a
+                few days. Only a sow “on-heat” can be successfully mated.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="housing.jpg"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container">
+        <span class="text-muted">@copy right 2020</span>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
